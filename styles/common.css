@@ -1,0 +1,57 @@
+:root{/*esto es crear la var de forma global*/
+    --bg-color: #000000;/*crear variable*/
+    --main-brand-color: #e50914;
+    --main-brand-color-light: #e44c54;
+    --secondary-brand-color: #0e1b4f;
+    --main-text-color: #FFF;
+    --border-color: #4b5563;
+    --main-font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.main-bg{
+    background-color: rgb(41, 131, 205);
+    background-color: #211fb583;
+    background-color: rgba(8, 8, 8, 0.938);
+    background-color: var(--bg-color);/*usando la variable bg*/
+    padding: 2rem;
+
+    color: #fff;
+}
+
+
+
+/* @media print se utiliza para definir estilos específicos cuando un documento web se imprime, en lugar de mostrarse en la pantalla. 
+Esto permite que el contenido se adapte adecuadamente para impresión, 
+eliminando o modificando elementos que no son necesarios o adecuados en papel, 
+como colores de fondo o imágenes no esenciales.
+
+usos
+Eliminar elementos innecesarios como menús, pies de página o anuncios.
+Cambiar la paleta de colores para que sea más legible en papel.
+Ajustar el tamaño de las fuentes para que se adapten mejor al formato impreso.
+Optimizar el diseño para una disposición más adecuada en la página.
+
+*/
+@media print { 
+    /*.header{
+        display: none;  Oculta la navegación y pie de página en la impresión 
+    }
+    .footer{
+        display: none;
+    }
+    .banner{
+        display: none;
+    }*/
+    
+    header.header, .footer, .banner{ /* header.header aumenta la espicificidad */
+        display: none;
+    }
+}
+
+
+/*prefers-color-scheme permite detectar si el usuario ha configurado su dispositivo en modo claro o modo oscuro. 
+Esto es útil para adaptar la apariencia de una página web según las preferencias del usuario, mejorando la accesibilidad y experiencia de uso*/
+@media (prefers-media-schema: light){
+
+}

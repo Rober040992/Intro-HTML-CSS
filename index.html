@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codeflix</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/banner.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/info.css">
+</head>
+
+<body class="main-bg">
+    <header class="header">
+    <!--div son contenedores para separar secciones , contenido etc -->
+        <img class="image" src="./assets/app/codeflix.png" alt="CodeFlix brand icon"> 
+        <nav class="nav">
+            <div>
+                <ol></ol><!--lista ordenada con numeros -->
+                <ul class="list"><!--no ordenada , con puntos --> 
+                    <li>
+                        <a class="btn hidden" class ="#shows">All shows</a> <!--links a traves del id shows  -->
+                    </li> <!--lista normal -->
+                    
+                    <li><a class="btn" href="signin.html" target="_blank" rel="noopener noreferrer">Sign in</a></li> <!--links externos| target blank para no dejar rastro  -->
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <H1>CodeFlix Movies</H1>
+    <section class="banner">
+        <div class="image"></div> <!--div no tiene valor semantico--> 
+        <div class="content">
+            <h2>Unlimited movies, Tv shows and more</h2>
+            <p class="bold">Watch anywhere. Cacel anytime</p>
+            <p class="">Ready to watch? </p>
+        </div>    
+    </section>
+
+    <main>
+        <section class="info">
+            <div>
+                
+            <h2>watch everywhere</h2>
+            <p>Stram unlimited movies and TV shows on your, phone, tablet, laptop, and TV.</p>
+
+            </div>
+            <div class="assets">
+                <img src="assets\app\device-pile.png" alt="">
+                <video src="assets\app\video-devices.m4v" autoplay muted loop>
+                    <source src="assets\app\video-devices.m4v" type="mp4"> <!--para meter otros formatos -->
+                </video> <!-- usar control para desplegar controles del video , tambien podemos usar autoplay mute y loop para qe empiece muteao y no pare de ejecurtarlo-->
+            </div>
+        </section>
+        <hr>
+        <p id="shows" class="bold">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        aspernatur animi quibusdam a temporibus quam autem.
+        </p>
+    </main>
+
+    <iframe class="youtube" src="https://www.youtube.com/watch?v=qnun3eogqh0" frameborder="0"></iframe><!--para ver una web dentro de tu web -->
+
+    <footer class="footer">
+        <p>2024 <strong>CodeFlix</strong> . <br><em>All righs reserved</em><br></p>
+    </footer>
+</body>
+</html>

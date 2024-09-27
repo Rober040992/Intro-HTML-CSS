@@ -1,0 +1,9 @@
+.btn{/*boton*/
+    color: var(--main-text-color);
+    background-color: var(--main-brand-color);
+    text-decoration: none;/*para quitarle la linea que aparece debajo por que es un boton*/
+    padding: 0.5rem;
+    display: inline-block; /*para que se comporte en linea pero en bloque y que no se superpongan los paddings*/
+    border-radius: 7px; /*para darle curva al borde del padding*/
+    
+}

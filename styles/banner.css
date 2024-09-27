@@ -1,0 +1,27 @@
+.banner {
+    height: 75vh; /*otra unidad relativa, view port height*/
+    align-content: center; /* todo el texto en el centro de arriba abajo*/
+    position: relative;
+    .bold{ /*solo la class bold dentro de banner cambia*/
+        font-weight: bold;
+        color: rgb(245, 245, 245);
+    }
+    .content{
+        text-align: center; /* todo el texto en el centro de iz a der*/
+        z-index: 1; /*z index va siempre relacionado con la posicion por eso podemos usarlo en la img o en el texto (hay ejm de los dos)*/
+        position: relative; /*para pòner el texo por encima de la imagen(ver video 24/9 a las 20:50 aprox)*/
+    }
+    .image{
+        background-image: url('../assets/app/catalog.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; /*se estira con las dimensiones es perfecto para imagenes de fondo*/
+        position: absolute;
+        top: 0; /*aumenta el valor hacia abajo de la pantalla*/
+        left: 0; /*aumenta el valor hacia derecha de la pantalla*/
+        bottom: 0; /*aumenta el valor hacia arriba de la pantalla*/
+        right: 0; /*aumenta el valor hacia izquierda de la pantalla*/
+        opacity: 0.6;
+        z-index: -1;
+    }
+}
+

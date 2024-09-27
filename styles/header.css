@@ -1,0 +1,50 @@
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+    .image{
+        width: 20%;
+        min-width: 120px;
+    } 
+
+    .nav{
+        .list{
+            list-style: none; /*para quitar los estilos que tiene por defecto*/
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 10px;
+        }
+    }
+}
+.hidden{
+    display: none;
+}
+
+@media screen and (width > 768px){
+    .hidden{
+        display: block;
+    }
+}
+/*
+usar esto para elemtos no muy complejos,como listados, para eso  usaremos grid
+usar esto es imprescindible
+display:flex;   pone a los elemtos de dentro de la clase alineados horizontalmente
+justify-content: center; alinea los elementos en el centro sin depender del ancho
+aling-items: center; manda los elementos al centro sin depender de la altura
+justify-content: space-betwen; esparce los elementos y los separa entre ellos a lo ancho , parecido si usamos around
+flex-direction: column; alinea los items verticalmente (row para fila)
+gap : 10px; crea espacio entre los items a modo de margin pero solo entre ellos
+flex-wrap: no-wrap; simpre em la misma linea sin pasar elementos a la parte de abajo al empequeñecer la pantalla
+
+
+pagina web 
+css-trick
+flex frog
+*/
