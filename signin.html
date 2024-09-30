@@ -1,66 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>codeflix signin</title>
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/components.css">
+    <link rel="stylesheet" href="./styles/signin.css">
+
 </head>
-<body>
-    <h1>Formulario</h1>
-    <form method="post"><!--usamos methiod post por seguridad !hacerlo siempre!-->
-        <div> <!--usamos div para separar los elementos del formulario ,aunque tambiem podemos usar el css display flex column -->
-            <label class="sr-only" for="mail">Email</label> <!--en el for siempre el id // sr-only es un estyle para ocultar el label-->
-            <input type="email" id="mail" placeholder="tu email aqui" name="correo" autocomplete="off"> <!--siempre type id name-->
-        </div>
-        <br>
-        <div> <!--usamos div para separar los elementos del formulario-->
-            <label for="password">Password</label>
-            <input type="password" name="pass" id="password">
-        </div>
-        <br>
-        <div>
-            <label for="tel">Phone number</label>
-            <input type="tel" name="" id="tel" name="phone">
-        </div>
-        <br>
-        <div>
-            <label for="file">Choose a picture</label>
-            <input type="file" id="file" name="profile" accept="img/png" multiple><!--multiple para elegir mas de una img-->
-        </div>
-        <br>
-        <fieldset> <!--agrupa varios campos, en este caso vamos tener 2 y solo se selecciona uno (checkbox y radio(radio no se desmarca))-->
-            <legend>Genre</legend>
-            <label for="shows">shows</label>
-            <input type="radio" id="shows" name="genre" value="shows" checked> <!--para saltar entre radios si tienes varios usa el mismo name para que solo quede uno marcado, usar value en radio, checked para que aparezca directamente seleccionado-->
-            <label for="docu">docu</label>
-            <input type="radio" id="docu" name="genre" value="docu">
-        </fieldset>
-        <br>
-        <div>
-            <label for="bio"> User bio</label>
-            <textarea name="userbio" id="bio" rows="0" cols="100"></textarea> <!--rows para add filas y colums para columnas--> 
-        </div>       
-        <br>
-        <button type="button">Guardar</button>
-        <div>
-            <label for="country">Country</label>
-            <select name="Country" id="country">
-                <option value="ES">Spain</option>
-                <option value="CO">Colombia</option>
-                <option value="US">USA</option>
-            </select>
-            <input type="date"> <!--input de fecha dd/mm/año-->
-        </div>
-        <br>
-        <div>
-            <label for="remember">Remember me</label>
-            <input type="checkbox" name="rememberme" id="remember">
-        </div>
-        <br>
-        <div>
-            <button type="reset"> Reset </button>
-            <button type="submit">Guardar</button>
-        </div>
-    </form>
+<!-- aquui uso la clase ya creada mainbg y a parte le meto otra llamada container -->
+
+<body class="main-bg container">
+    <main class="card">
+        <h1>Formulario</h1>
+        <form method="post"><!--usamos methiod post por seguridad !hacerlo siempre!-->
+            <div class="form_input">
+                <!--usamos div para separar los elementos del formulario ,aunque tambiem podemos usar el css display flex column -->
+                <label class="sr-only" for="mail">Email</label>
+                <!--en el for siempre el id // sr-only es un estyle para ocultar el label-->
+                <input type="email" id="mail" placeholder="tu email aqui" name="correo" autocomplete="off" readonly
+                    required>
+                <!--
+                siempre type id name
+                required obliga a relenar el campo
+                -->
+
+            </div>
+            <br>
+            <div class="form_input"> <!--usamos div para separar los elementos del formulario-->
+                <label for="password">Password</label>
+                <input type="password" name="pass" id="password" required>
+            </div>
+            <br>
+            <div class="form_input">
+                <label for="tel">Phone number</label>
+                <input type="tel" name="" id="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 123-123-1234
+                    title="format (123-123-1234)"> <!-- pattern: expresion regular , carazteres que definen patrones de texto, en este caso son 3 grupos de numeros del 0 al 9 de 3 3 y 4 numeros
+                        title hace lo mismo
+                -->
+            </div>
+            <br>
+            <div class="form_input">
+                <label for="file">Choose a picture</label>
+                <input type="file" id="file" name="profile" accept="img/png" multiple
+                    required><!--multiple para elegir mas de una img-->
+            </div>
+            <br>
+            <fieldset>
+                <!--agrupa varios campos, en este caso vamos tener 2 y solo se selecciona uno (checkbox y radio(radio no se desmarca))-->
+                <legend>Genre</legend>
+                <label for="shows">shows</label>
+                <input type="radio" id="shows" name="genre" value="shows" checked required>
+                <!--para saltar entre radios si tienes varios usa el mismo name para que solo quede uno marcado, usar value en radio, checked para que aparezca directamente seleccionado-->
+                <label for="docu">docu</label>
+                <input type="radio" id="docu" name="genre" value="docu" required>
+            </fieldset>
+            <br>
+            <div class="form_input">
+                <label for="bio"> User bio</label>
+                <textarea name="userbio" id="bio" rows="0" cols="40" maxlenght="10" required></textarea>
+                <!--rows para add filas y colums para columnas-->
+            </div> <!--validamos numeo maximo de carazteres 10-->
+            <br>
+            <button type="button">Guardar</button>
+            <div class="form_input">
+                <label for="country">Country</label>
+                <select name="Country" id="country">
+                    <option value="ES">Spain</option>
+                    <option value="CO">Colombia</option>
+                    <option value="US">USA</option>
+                </select>
+                <input type="date"> <!--input de fecha dd/mm/año-->
+            </div>
+            <br>
+            <div class="form_input">
+                <label for="remember">Remember me</label>
+                <input type="checkbox" name="rememberme" id="remember">
+            </div>
+            <br>
+            <div class="form_input">
+                <label for=""> Number </label>
+                <input type="number" name="number" id="number" min="0" max="10" required>
+                <!--añade campo para elegir numero entre 0-10 -->
+            </div>
+            <div class="form_input">
+                <button class="button" type="reset"> Reset </button>
+                <button type="submit">Guardar</button>
+            </div>
+        </form>
+    </main>
 </body>
+
 </html>
