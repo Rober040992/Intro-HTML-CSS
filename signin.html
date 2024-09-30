@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codeflix signin</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <form method="post"><!--usamos methiod post por seguridad !hacerlo siempre!-->
+        <div> <!--usamos div para separar los elementos del formulario ,aunque tambiem podemos usar el css display flex column -->
+            <label class="sr-only" for="mail">Email</label> <!--en el for siempre el id // sr-only es un estyle para ocultar el label-->
+            <input type="email" id="mail" placeholder="tu email aqui" name="correo" autocomplete="off"> <!--siempre type id name-->
+        </div>
+        <div> <!--usamos div para separar los elementos del formulario-->
+            <label for="password">Password</label>
+            <input type="password" name="" id="password">
+        </div>
+        <button>Guardar</button>
+    </form>
+</body>
+</html>
