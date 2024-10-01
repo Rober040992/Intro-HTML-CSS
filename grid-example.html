@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="styles\grid.css">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>grid examples</title>
+    <!--
+    dentro de este style le metemos los estilos para el grid
+    cada valor es de cada clumna o fila
+    la medida fr son el espacio disponible . a si que podemos usar 1fr para cada columna(que serian iguales y se adaptan)
+    para que una columna sea fija en caso de que queramos la de enmedio fija se puede usar 1fr 200px 1fr
+    template areas : es muy visual , usamos . para decir donde no queremos el grid, con align items center centra en el centro de la fila y con jusify content al centro de columna
+    
+    -->
+    <style>
+        body{
+            margin: 0;
+            background-color: black;
+            display: grid;    
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 10vh 40vh 60vh 10vh;
+            grid-template-areas: 
+            "header header header"
+            ". section ."
+            "aside main main"
+            "footer footer footer";
+            
+        }        
+            header{
+            background-color: orange;
+            grid-column: 1/3;
+            grid-row: 1/2;
+
+        }
+        section{
+            background-color: aqua;
+            grid-column: 2/4;
+        }
+        aside{
+            background-color: rgb(195, 0, 255);
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+        main{
+            background-color: yellow;
+            grid-column: 2/3;
+            grid-row: 3/4;
+        }
+        footer{
+            background: green;
+            grid-column: 3/4;
+            grid-row: 4/5;
+        }
+    </style>
 </head>
 <body>
-    
-    
+    <header>header</header>
+    <section>section</section>
+    <aside>aside</aside>
+    <main>main</main>
+    <footer>footer</footer>
 </body>
 </html>
