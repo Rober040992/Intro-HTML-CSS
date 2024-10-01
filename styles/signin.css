@@ -10,18 +10,3 @@
     margin: 0 auto;
 }
 
-.form_input{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0.3rem;
-    label{
-        margin-bottom: 0.4rem;
-
-    }
-    input{
-        padding: 0.3rem;
-        border-radius: 10px;
-        border: none;
-        background-color: #cdacac;
-    }
-}

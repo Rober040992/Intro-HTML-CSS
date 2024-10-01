@@ -5,5 +5,35 @@
     padding: 0.5rem;
     display: inline-block; /*para que se comporte en linea pero en bloque y que no se superpongan los paddings*/
     border-radius: 7px; /*para darle curva al borde del padding*/
-    
+    &.secondary{
+        background-color: transparent;
+        border: 1px solid
+
+    }
+}
+@media screen and (hover : hover) { /* esta media query permite hacerlo solo en las versiones que puedan hacer hover */  
+    .btn{
+        cursor: pointer;
+        /* como cambiar el css cuando el cursor esta encima*/
+        &:hover {
+            color: blueviolet;
+        }
+    }
+}
+
+
+.form_element{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.3rem;
+    label{
+        margin-bottom: 0.4rem;
+
+    }
+    .input{
+        padding: 0.3rem;
+        border-radius: 10px;
+        border: none;
+        background-color: #cdacac;
+    }
 }
