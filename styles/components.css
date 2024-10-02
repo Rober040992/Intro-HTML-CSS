@@ -5,18 +5,37 @@
     padding: 0.5rem;
     display: inline-block; /*para que se comporte en linea pero en bloque y que no se superpongan los paddings*/
     border-radius: 7px; /*para darle curva al borde del padding*/
-    &.secondary{
-        background-color: transparent;
-        border: 1px solid
+    /*
+    video de clase 01/10/24 22:30
+    transicion entre el comienzo y el final de de ello .. debe conocer el valor inicial
 
+    transition: background-color 1s ; 
+    transition-timing-function: ease-in-out;
+    
+    */
+    width: 100px;
+    transition: background-color 0.3s linear, width 3s linear;
+    &.secondary {
+    background-color: transparent;
+    border: 1px solid var(--main-text-color);
     }
 }
-@media screen and (hover : hover) { /* esta media query permite hacerlo solo en las versiones que puedan hacer hover */  
+.wide {
+    width: 200px;
+}
+
+
+@media screen and (hover : hover) { 
+    /* esta media query permite hacerlo solo en las versiones que puedan hacer hover */  
+    
     .btn{
         cursor: pointer;
         /* como cambiar el css cuando el cursor esta encima*/
         &:hover {
             color: blueviolet;
+        }
+        &.secondary:hover {
+            background-color: var(--border-color);
         }
     }
 }

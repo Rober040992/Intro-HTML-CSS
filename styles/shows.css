@@ -1,0 +1,40 @@
+.shows{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1000px;
+    
+    img{
+        width: 100%;
+    }
+
+    .list{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+
+        /* 
+        si las imagenes que metes en el grid son de dimensiones diferentes:
+            ve a elemento de la img separa la img en un div , accede a ese div con css le metes overflow hidden y un height fijo comun en todas
+
+        auto fill auto fit y min max() 
+        esto hace que las 4 imagenes se dispongan de 4 a 3 a 2 columnas dependiendo de las dimensiones
+        */
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 20px; /* se aplica a colum-gap y row-gap*/
+        
+        figure{
+            margin:0;
+        }
+    }
+}
+
+
+/*
+usando media query en ver de autofit auti fill min max
+@media screen and (width >768){
+    .shows.list{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
