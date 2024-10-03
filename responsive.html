@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        margin: 0;
+    }
+    .catalog{
+        background-color: aqua;
+        width: 100%;
+        /* 
+        propiedades nuevas 
+        contain lo mete con espacios a los lados
+        cover centra y lo cubre todo y se puede jugar con su position 
+        (para el banner es )
+        */
+        aspect-ratio: 2;
+        object-fit: contain;
+        object-position: top;
+    }
+</style>
+</head>
+<body>
+    <!--1 ejem posicion de imagen -->
+    <!-- <img class="catalog" src="assets/app/catalog.jpg" alt=""> -->
+    <!-- 2ej picture -->
+    <picture>
+        <source srcset="assets\responsive-images\dog_c_scalew_1352.jpg" media="min-width:1200px">
+        <source srcset="assets\responsive-images\dog_c_scalew_1089.jpg" media="min-width:800px">
+        <source srcset="assets\responsive-images\dog_c_scalew_591.jpg" media="max-width:800px">
+    </picture>
+    <!--3ej srcset  este es el ideal , usar para cambiar img dependiendo del width y usando el width propio de la img-->
+    
+    <img src="assets/responsive-images/dog_c_scalew_1352.jpg"
+    srcset = "
+    assets\responsive-images\dog_c_scalew_591.jpg 591w,
+    assets\responsive-images\dog_c_scalew_1089.jpg 1089w,
+    assets\responsive-images\dog_c_scalew_1352.jpg 1352w
+    "
+    >
+</body>
+</html>

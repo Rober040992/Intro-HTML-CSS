@@ -19,11 +19,10 @@
 } 
 */
 
-.footer {
+footer {
     text-align: center; /*nunca usar el jsutificado*/
     font-weight: bold;
     font-style:italic ;
-    background-color: beige; 
     color: #1a05fa;
     /*rem = 16 px y va ligado al valor del root 
     es mejor usar estas por que son relativas, los px son fijos
@@ -31,4 +30,6 @@
     */
     font-size: 1rem;
     padding: 1rem;
-}
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    }
+    

@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>codeflix</title>
@@ -17,10 +18,95 @@
     <meta property="og:description" content="CodeFlix best movie" >
     <meta property="og:image" content="https://github.com/KeepCodingWeb17/html-css/blob/main/assets/app/catalog.jpg?raw=true" >
 
+<!-- como hacer animaciones  3/10/24 7pm-->
+<!-- /*
+animation-name: test; para usar la animacion; 
+animation-duration: 10s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;  para que no pare 
+animation-direction: reverse; 
+}
+@keyframes test{
+0% {width: 50px;}
+25% {width: 100px; background-color: blue;}
+50%{width: 25px;}
+100%{width: 100px; background-color: blueviolet;}
+} */ -->
+<style>
+    .spinner{
+        margin: 3rem;
+        background-color: rgba(250, 249, 249, 0);
+        border-left: 5px solid red;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        animation: spinner 1s linear /*infinite*/;
+        
 
-</head>
+    }
+    @keyframes spinner{
+        /* rotate para que gire y los grados */
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+            border: 5px solid black;
+        }
+    }
+    .progress{
+        height: 20px;
+        background-color: red;
+        width: 0;
+        position: fixed;
+        top: 0;
+        z-index: 900;
+        animation: progress 1s linear;
+        animation-fill-mode: forwards;
+        /* scroll()para que la animacion avanze cuando scroleamos 
+        si combinamos esto con la opacidad creamos un efecto fade*/
+        animation-timeline: scroll();
+    }
+    /* @supports para ver si esta soportada o no*/
+    /* en esta media añadimos los keyframes para que la persona pueda desactivar las animaciones */
+    @media screen and (prefers-reduced-motion: no-preference){
+
+    }
+
+    @keyframes progress{
+        /* aq */
+        0%{width: 0; opacity: 100%;}
+        100%{width: 100%; opacity: 0%;}
+    }
+    ul{
+        /* 
+        selector > solo los li justo despues del primer ui 
+        nth-child selecciona cual de ellos
+        nth-odd o even para pares o impares
+        */
+        &.list > li :nth-child(2){
+            border-bottom: 1px solid white;
+        }
+    }
+    
+</style>
 
 <body class="main-bg">
+
+<div class="spinner" ></div>
+<div class="progress" ></div>
+<ul class="list" >
+    <li>example1
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ul>
+    </li>
+    <li>example2</li>
+    <li>example3</li>
+    <li>example4</li>
+</ul>
     <header class="header">
     <!--div son contenedores para separar secciones , contenido etc -->
         <img class="image" src="./assets/app/codeflix.png" alt="CodeFlix brand icon"> 
@@ -108,7 +194,7 @@
 
     <iframe class="youtube" src="https://www.youtube.com/watch?v=qnun3eogqh0" frameborder="0"></iframe><!--para ver una web dentro de tu web -->
 
-    <footer class="footer">
+    <footer class="kay-pho-du-regular">
         <p>2024 <strong>CodeFlix</strong> . <br><em>All righs reserved</em><br></p>
     </footer>
 </body>

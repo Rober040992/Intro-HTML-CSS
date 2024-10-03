@@ -15,7 +15,6 @@
     background-color: rgba(8, 8, 8, 0.938);
     background-color: var(--bg-color);/*usando la variable bg*/
     padding: 2rem;
-
     color: #fff;
 }
 
